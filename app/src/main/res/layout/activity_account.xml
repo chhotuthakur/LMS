@@ -12,7 +12,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:id="@+id/btn_con">
+        android:id="@+id/btn_con"
+        android:layout_marginBottom="8dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,6 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/acc_frag_container"
-        android:layout_below="@id/btn_con"/>
+        android:layout_below="@id/btn_con"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_blue_bright"/>
 
 </RelativeLayout>
