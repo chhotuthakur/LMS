@@ -44,6 +44,17 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_blue_bright"/>
+        android:background="@android:color/holo_blue_bright"
+        android:layout_above="@id/adView"/>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8015685894800203/9113307101">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
