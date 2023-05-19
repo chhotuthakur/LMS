@@ -6,6 +6,7 @@ import android.accounts.Account;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -20,5 +21,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(new Intent(SplashActivity.this, AccountActivity.class));
             }
         },4000);
+        Toast.makeText(this, "WELCOME TO APPLICATION", Toast.LENGTH_SHORT).show();
     }
 }
