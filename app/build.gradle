@@ -45,4 +45,7 @@ dependencies {
 
 //    admob
     implementation 'com.google.android.gms:play-services-ads:22.1.0'
+
+    implementation 'com.jjoe64:graphview:4.2.2'
+
 }

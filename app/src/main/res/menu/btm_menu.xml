@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/Profile"
+        android:id="@+id/profile"
         android:title="PROFILE"
         android:icon="@drawable/profile"
         />
     <item
-        android:id="@+id/Cart"
+        android:id="@+id/cart"
         android:title="CART"
         android:icon="@drawable/add_shopping_cart"/>
     <item
-        android:id="@+id/Setting"
+        android:id="@+id/setting"
         android:title="SETTING"
         android:icon="@drawable/settings"/>
 

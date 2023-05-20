@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
+import com.nilesh.lms.activity.MainActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -18,8 +20,9 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, AccountActivity.class));
-            }
+            Intent i=new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(i);
+                        }
         },4000);
         Toast.makeText(this, "WELCOME TO APPLICATION", Toast.LENGTH_SHORT).show();
     }
