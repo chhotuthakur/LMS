@@ -5,11 +5,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.VideoView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -22,6 +27,8 @@ public class AccountActivity extends AppCompatActivity {
     private AdView mAdView;
     TextView log,reg;
     Fragment fragment;
+    RelativeLayout parent;
+    VideoView videoview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +49,22 @@ public class AccountActivity extends AppCompatActivity {
 
 
 
+        parent = findViewById(R.id.parent_layout);
         log = findViewById(R.id.login_txt);
         reg = findViewById(R.id.reg_txt);
+//background using video
+        videoview =findViewById(R.id.bg_vid_view);
+        Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.bg_ani);
+        videoview.setVideoURI(uri);
+        videoview.start();
+        videoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
+
 
         fragment = new LoginPageFrgmt();
 
@@ -95,5 +116,11 @@ public class AccountActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        videoview.start();
     }
 }

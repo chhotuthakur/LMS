@@ -46,6 +46,8 @@ dependencies {
 //    admob
     implementation 'com.google.android.gms:play-services-ads:22.1.0'
 
+//    chart library
     implementation 'com.jjoe64:graphview:4.2.2'
-
+//    glide library
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 }

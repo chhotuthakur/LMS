@@ -6,7 +6,7 @@
     tools:context=".RegFragment"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#FFFFFF">
+    android:background="@android:color/transparent">
 
     <TextView
         android:layout_width="match_parent"

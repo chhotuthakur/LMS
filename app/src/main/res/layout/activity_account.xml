@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountActivity">
+    tools:context=".AccountActivity"
+    android:id="@+id/parent_layout">
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg_vid_view"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        android:background="@android:color/transparent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,11 +23,15 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:id="@+id/btn_con"
-        android:layout_marginBottom="8dp">
+        android:padding="8dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/bg_glass"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
+            android:textColor="@color/black"
             android:textSize="25sp"
             android:gravity="center"
             android:id="@+id/login_txt"
@@ -44,8 +58,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_blue_bright"
-        android:layout_above="@id/adView"/>
+        android:background="@android:color/transparent"
+        />
+    </RelativeLayout>
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
@@ -56,5 +71,6 @@
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-8015685894800203/9113307101">
     </com.google.android.gms.ads.AdView>
+
 
 </RelativeLayout>
