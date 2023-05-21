@@ -16,7 +16,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.nilesh.lms.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
     TextView bsdk;
     BottomNavigationView gandu;
 
@@ -34,6 +34,22 @@ public class MainActivity extends AppCompatActivity {
                 new DataPoint(4, 6)
         });
         graph.addSeries(series);
+        bsdk = findViewById(R.id.email);
+        gandu = findViewById(R.id.btn_con);
+
+
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.profile){
+            bsdk.setText("home");
+        } else if (item.getItemId() == R.id.cart){
+            bsdk.setText("cart");
+        }else if (item.getItemId() == R.id.setting){
+            bsdk.setText("setting");
+        }
+        return false;
+    }
 }
